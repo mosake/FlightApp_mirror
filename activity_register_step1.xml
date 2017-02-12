@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="56dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    tools:context="cs.b07.flightmanager.RegisterStep1Activity"
+    android:baselineAligned="true">
+    <!-- Email Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/reg_user_string"
+        android:layout_alignParentStart="true" />
+    <EditText android:id="@+id/username_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/reg_user_field" />
+
+    <!-- First password entry -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/reg_pass_string2"
+        android:layout_alignParentStart="true" />
+    <EditText android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/passString" />
+
+    <!-- Second password entry -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/reg_pass_string"
+        android:layout_alignParentStart="true" />
+
+    <EditText android:id="@+id/password2_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/passString" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Registration_radiogroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/administrator"
+            android:id="@+id/Admin_button"
+            android:checked="false"
+            android:allowUndo="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client"
+            android:id="@+id/Client_button"
+            android:checked="false"
+            android:allowUndo="true" />
+    </RadioGroup>
+
+    <Button android:id="@+id/r1_next"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/reg_next"
+        android:onClick="nextPage"
+        android:layout_gravity="right" />
+
+</LinearLayout>

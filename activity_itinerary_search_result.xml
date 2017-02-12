@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cs.b07.flightmanager.ItinerarySearchResultActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/departureIcon"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_departure" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Large Text"
+                    android:id="@+id/originField"
+                    android:layout_alignBottom="@+id/departureIcon"
+                    android:layout_toEndOf="@+id/departureIcon"
+                    android:singleLine="true"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="2dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arrivalIcon"
+                    android:src="@drawable/ic_arrival" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Large Text"
+                    android:id="@+id/destinationField"
+                    android:layout_alignBottom="@+id/arrivalIcon"
+                    android:layout_toEndOf="@+id/arrivalIcon"
+                    android:singleLine="true"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="2dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/departureDateIcon"
+            android:layout_below="@+id/linearLayout3"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Large Text"
+            android:id="@+id/departureDateField"
+            android:layout_alignBottom="@+id/departureDateIcon"
+            android:layout_toEndOf="@+id/departureDateIcon"
+            android:paddingBottom="2dp"
+            android:paddingStart="2dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#999999" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itinerariesList"
+        android:paddingTop="10dp" />
+</LinearLayout>

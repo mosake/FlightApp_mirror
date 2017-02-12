@@ -1,0 +1,62 @@
+23/11/2015 Planning Meeting #1
+- Decided what activities we need to implement
+- Designed UI for all activities(Pictures sent to Facebook group)
+- Determined what we need to complete before P3a interview
+    - The login activity
+    - The register activity
+    - The welcome activity
+    - The profile activity
+    - The edit info activity
+    - If time allows, the search itinerary activity
+    - If time allows, the view booked itineraries activity
+- Task assignment:
+    - Kelly: login, register step 1
+    - Rose: register step 2 & 3
+    - Tarun: welcome
+    - Andrew: profile & edit info
+
+26/11/2015 Status Meeting #1
+- Andrew
+    - Finished ProfileActivity and editing related activities
+- Kelly
+    - Finished RegisterStep1Activity
+    - Working on LoginActivity
+- Rose
+    - Finished RegisterStep2Activity
+- Tarun
+    - Working on the welcome activity
+
+27/11/2015 Planning Meeting #2
+- Task assignment:
+    - Andrew:
+        - search itineraries
+        - search flights
+        - book itineraries
+        - view booked itineraries
+    - Kelly:
+        - file opeartion
+        - serialization
+    - Tarun:
+        - admin view information of a client
+        - admin upload a csv file to update information
+    - Rose:
+        - admin book itinerary for a client
+        - admin edit information for a flight
+        - admin upload csv file to update flight information
+
+02/12/2015 Status Meeting #2
+- Andrew:
+    - finished search itineraries
+    - finished search flights
+    - working on book itineraries
+    - working on view booked itineraries
+- Kelly:
+    - working on data storage
+- Tarun:
+    - finished admin viewing information of a client
+    - working on uploading csv
+- Rose:
+    - finished admin booking itinerary for a client
+    - finished admin edit information for a flight
+    - working on uploading csv
+

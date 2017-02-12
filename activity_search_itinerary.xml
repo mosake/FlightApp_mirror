@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cs.b07.flightmanager.SearchItineraryActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/searchCriteria">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/departureIcon"
+            android:src="@drawable/ic_departure"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/originEdit"
+            android:layout_alignParentTop="true"
+            android:hint="@string/origin"
+            android:singleLine="true"
+            android:layout_toEndOf="@+id/departureIcon"
+            android:layout_toStartOf="@+id/switchButton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arrivalIcon"
+            android:src="@drawable/ic_arrival"
+            android:layout_below="@+id/departureIcon"
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/destinationEdit"
+            android:hint="@string/destination"
+            android:singleLine="true"
+            android:layout_below="@+id/originEdit"
+            android:layout_alignStart="@+id/originEdit"
+            android:layout_toStartOf="@+id/switchButton" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchButton"
+            android:src="@drawable/ic_switch"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/destinationEdit"
+            android:layout_alignParentTop="true"
+            android:onClick="switchOriginAndDestination" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_date"
+            android:layout_below="@+id/destinationEdit"
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/departure_date"
+            android:id="@+id/departureDateLabel"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignStart="@+id/destinationEdit"
+            android:paddingBottom="7dp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/departureDatePicker"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            tools:ignore="UnusedAttribute"
+            android:layout_below="@+id/departureDateLabel" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go"
+        android:id="@+id/confirmButton"
+        android:letterSpacing="0.5"
+        tools:ignore="UnusedAttribute"
+        android:onClick="onClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sortIcon"
+        android:layout_below="@+id/searchCriteria"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_sort" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by"
+        android:id="@+id/sortByLabel"
+        android:paddingBottom="7dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignBottom="@+id/sortIcon"
+        android:layout_toEndOf="@+id/sortIcon" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sortIcon"
+        android:layout_toEndOf="@+id/sortIcon">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_travel_time"
+            android:id="@+id/totalTravelTimeOption"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_price"
+            android:id="@+id/totalPriceOption" />
+    </RadioGroup>
+</RelativeLayout>
